@@ -1,4 +1,4 @@
-# DaiViet-Pattern Benchmark — Task 4.1
+# DaiViet-Pattern Benchmark
 
 Comparative evaluation of four generative models for Vietnamese ornamental pattern (*hoa văn*) synthesis, using a curated dataset of vector motifs extracted from the *Hoa Văn Đại Việt* publication series.
 
