@@ -49,3 +49,17 @@ Thumbs.db
 
 # Claude config
 .claude/
+
+# Re-run backups and weight file types (local only)
+*.ckpt
+*.pth
+benchmark/checkpoints/*_pre_retrain/
+benchmark/checkpoints/M3_crashed_ep10/
+benchmark/checkpoints/M6_50ep_unused/
+benchmark/checkpoints_v1_leaked/
+benchmark/generated_pre_retrain/
+benchmark/generated_v1_leaked/
+benchmark/_generated_wrong_prompts/
+benchmark/results_v1_leaked/
+benchmark/_results_wrong_prompts/
+generated_samples_v1_leaked/

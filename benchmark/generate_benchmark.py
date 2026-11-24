@@ -54,8 +54,7 @@ INFERENCE_STEPS    = 30
 GUIDANCE_SCALE     = 7.5
 NEGATIVE_PROMPT    = (
     "blurry, low quality, modern, western style, photograph, "
-    "tiled pattern, repeating pattern, wallpaper, seamless texture, "
-    "multiple motifs, collage, grid, realistic, 3d render, text, watermark"
+    "realistic, 3d render, text, watermark"
 )
 
 TRIGGER_WORDS = {
@@ -116,19 +115,21 @@ def build_prompt(period: str, use_trigger: bool,
     M2/M3/M6: use trigger-word prompt.
     """
     if not use_trigger:
-        # M1 — vanilla baseline, no trigger word
+        # M1 — vanilla baseline prompt
+        if baseline_prompts and period in baseline_prompts:
+            return baseline_prompts[period]
         label = PERIOD_LABELS.get(period, period)
         return (
-            f"Vietnamese {label} traditional ornamental motif, "
-            "single motif, centered composition, white background, "
-            "black ink line art, high quality, detailed"
+            f"Vietnamese {label} traditional ornamental pattern, "
+            "black and white line art, traditional Dai Viet art, "
+            "high quality, detailed"
         )
     trigger = TRIGGER_WORDS[period]
     label   = PERIOD_LABELS.get(period, period)
     return (
-        f"{trigger}, Vietnamese {label} ornamental motif, "
-        "single motif, centered composition, white background, "
-        "black ink line art, high quality, detailed"
+        f"{trigger}, Vietnamese {label} ornamental pattern, "
+        "traditional Dai Viet art, black and white line art, "
+        "high quality, detailed"
     )
 
 
@@ -219,8 +220,6 @@ def load_pipeline(model_name: str, cfg: dict, device: torch.device):
             base,
             torch_dtype=torch.float16,
             use_safetensors=True,
-            safety_checker=None,
-            requires_safety_checker=False,
         ).to(device)
 
     # ── Memory optimisations ─────────────────────────────────────────────────

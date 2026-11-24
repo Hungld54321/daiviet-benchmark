@@ -1,0 +1,5 @@
+run,basis,n,min,max,median,p5,p95,mean
+rerun_v2,per_step_computed_steps_only,218,0.00085,0.12907,0.02063,0.00511,0.10412,0.03202
+rerun_v2,per_epoch_mean_incl_zero_steps,30,0.00084,0.00431,0.00193,0.00112,0.00296,0.00201
+paper_era_HEAD,per_step_computed_steps_only,235,0.00104,0.15322,0.02191,0.00391,0.09251,0.03284
+paper_era_HEAD,per_epoch_mean_incl_zero_steps,30,0.00075,0.00335,0.00192,0.00092,0.00322,0.00206

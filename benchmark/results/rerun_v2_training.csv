@@ -1,0 +1,4 @@
+model,epochs,steps_per_epoch,total_steps,train_time_min,peak_vram_gb,L_diff_last_epoch_mean,L_cult_last_epoch_mean_all_steps,L_cult_mean_over_computed_steps,paper_epochs,paper_steps_per_epoch,paper_L_diff_last_epoch_mean,paper_L_cult_last_epoch_mean_all_steps
+M2,50,116,5800,87.9,10.75,0.05072,,,50,125,0.04285,
+M3,50,29,1450,22.0,7.81,0.05623,,,50,31,0.05181,
+M6,30,116,3480,54.5,11.69,0.04499,0.00145,0.02409,30,125,0.04922,0.00232
